@@ -108,11 +108,10 @@ export default class MindMap {
 
     zoomTo (item) {
         if (this.scale > this.minScale) return;
-        const { left, top } = item.getRect();
-        const { offset, size } = item;
-        const x = left + size / 2;
-        const y = top + size / 2;
-        const scale = Math.min(this.getScale(offset), this.scale);
+        const parent = item.parent || { x: 0, y: 0 };
+        const x = parent.x + item.x;
+        const y = parent.y + item.y;
+        const scale = Math.min(this.getScale(item.offset), this.scale);
         this.item.$node.style.transition = '';
         this.item.$node.style.transform = `scale(${scale}) translate(${-x}px, ${-y}px)`
     }
