@@ -74,7 +74,7 @@
                 content: `
                     <div class="mm-link--4x4">
                         <p><img src="images/4x4.jpg"></p>
-                        <a href="https://vk.com/"><img src="images/vk.png"></a>
+                        <a href="https://vk.com/" target="_blank"><img src="images/vk.png"></a>
                     </div>
                 `,
             },
