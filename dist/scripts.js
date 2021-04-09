@@ -7,11 +7,11 @@
     // ------------------
 
     function image (key) {
-        return `<img src="/images/${key}">`
+        return `<a class="mm-link--image"><img src="images/${key}"></a>`
     }
 
-    function text (label, title) {
-        return `<p class="label">${label}</p><p class="title">${title}</p>`
+    function text (label, title, type, scale) {
+        return `<a class="mm-link--text mm-link--${type}" style="transform: scale(${scale})"><p class="label">${label}</p><p class="title">${title}</p></a>`
     }
 
 
@@ -34,7 +34,8 @@
                 radius: 410,
                 angle: 2,
                 size: 140,
-                content: image('instagram.png'),
+                link: 'https://www.instagram.com',
+                content: image('instagram.png')
             },
 
 
@@ -49,14 +50,16 @@
                     {
                         radius: 206,
                         angle: 26.6,
-                        size: 106,
-                        content: text('Страница', 'Нива.Клуб'),
+                        size: 108,
+                        link: 'https://www.facebook.com',
+                        content: text('Страница', 'Нива.Клуб', 'dark')
                     },
                     {
                         radius: 205,
                         angle: 331.2,
-                        size: 95,
-                        content: text('Группа', 'Нива.Клуб'),
+                        size: 108,
+                        link: 'https://www.facebook.com',
+                        content: text('Группа', 'Нива.Клуб', 'white', 0.9)
                     }
                 ]
             },
@@ -68,7 +71,12 @@
                 radius: 662,
                 angle: 38.4,
                 size: 122,
-                content: image('facebook.png'),
+                content: `
+                    <div class="mm-link--4x4">
+                        <p><img src="images/4x4.jpg"></p>
+                        <a href="https://vk.com/"><img src="images/vk.png"></a>
+                    </div>
+                `,
             },
 
 
@@ -78,6 +86,7 @@
                 radius: 466,
                 angle: 52.6,
                 size: 144,
+                link: 'https://www.youtube.com/',
                 content: image('youtube.png'),
             },
 
@@ -88,6 +97,7 @@
                 radius: 338,
                 angle: 70.4,
                 size: 106,
+                link: 'https://www.viber.com/',
                 content: image('viber.png'),
             },
 
@@ -104,12 +114,14 @@
                         radius: 137,
                         angle: 47.6,
                         size: 70,
+                        link: 'https://vk.com/',
                         content: image('vk.png'),
                     },
                     {
                         radius: 124,
                         angle: 103.2,
                         size: 72,
+                        link: 'https://web.telegram.org/',
                         content: image('telegram.png'),
                     }
                 ]
@@ -128,12 +140,14 @@
                         radius: 120,
                         angle: 95.4,
                         size: 54,
+                        link: 'https://web.telegram.org/',
                         content: image('telegram.png'),
                     },
                     {
                         radius: 130,
                         angle: 150,
                         size: 64,
+                        link: 'https://www.viber.com/',
                         content: image('viber.png'),
                     }
                 ]
@@ -152,18 +166,21 @@
                         radius: 141,
                         angle: 65.4,
                         size: 58,
+                        link: 'https://vk.com/',
                         content: image('vk.png'),
                     },
                     {
                         radius: 137,
                         angle: 111.9,
                         size: 64,
+                        link: 'https://www.facebook.com',
                         content: image('facebook.png'),
                     },
                     {
                         radius: 137,
                         angle: 152.8,
                         size: 64,
+                        link: 'https://www.viber.com/',
                         content: image('viber.png'),
                     }
                 ]
@@ -182,18 +199,21 @@
                         radius: 184,
                         angle: 133.6,
                         size: 94,
+                        link: 'https://www.instagram.com',
                         content: image('instagram.png'),
                     },
                     {
                         radius: 248,
                         angle: 164.2,
                         size: 102,
+                        link: 'https://vk.com/',
                         content: image('vk.png'),
                     },
                     {
                         radius: 192,
                         angle: 194,
                         size: 98,
+                        link: 'https://www.youtube.com/',
                         content: image('youtube.png'),
                     }
                 ]
@@ -212,37 +232,43 @@
                         radius: 176,
                         angle: 117,
                         size: 75,
+                        link: 'https://www.instagram.com',
                         content: image('instagram.png'),
                     },
                     {
                         radius: 204,
                         angle: 153.3,
                         size: 102,
+                        link: 'https://web.telegram.org/',
                         content: image('telegram.png'),
                     },
                     {
                         radius: 182,
                         angle: 193,
                         size: 102,
+                        link: 'https://vk.com/',
                         content: image('vk.png'),
                     },
                     {
                         radius: 188,
                         angle: 235.7,
                         size: 108,
+                        link: 'https://rozetka.com.ua/',
                         content: image('cart.png'),
                     },
                     {
                         radius: 176,
                         angle: 275.8,
                         size: 86,
+                        link: 'https://www.facebook.com',
                         content: image('facebook.png'),
                     },
                     {
                         radius: 188,
                         angle: 313.6,
                         size: 84,
-                        content: image('youtube.png'),
+                        link: 'https://www.youtube.com/',
+                        content: image('youtube.png')
                     }
                 ]
             },
@@ -254,7 +280,14 @@
                 radius: 370,
                 angle: 269.4,
                 size: 258,
-                content: image('facebook.png'),
+                link: 'http://example.com/',
+                content: `
+                    <a class="mm-link--forum mm-link--text">
+                        <img src="images/forum.png">
+                        <p class="label">Форум</p>
+                        <p class="title">Нива.Клуб</p>
+                    </a>
+                `,
             },
 
 
@@ -264,6 +297,7 @@
                 radius: 450,
                 angle: 310.9,
                 size: 144,
+                link: 'https://vk.com/',
                 content: image('vk.png'),
             },
 
@@ -280,13 +314,15 @@
                         radius: 232,
                         angle: 0.7,
                         size: 108,
-                        content: image('facebook.png'),
+                        link: 'https://web.telegram.org/',
+                        content: text('Страница', 'Нива.Клуб', 'light')
                     },
                     {
                         radius: 234,
                         angle: 312.2,
                         size: 108,
-                        content: image('facebook.png'),
+                        link: 'https://web.telegram.org/',
+                        content: text('Группа', 'Нива.Клуб', 'light')
                     }
                 ]
             }

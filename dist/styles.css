@@ -2,15 +2,27 @@
     Reset
 */
 
+* {
+    box-sizing: border-box;
+}
 html {
     height: 100%;
 }
 body {
     margin: 0;
     height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
 }
 img {
     display: block;
+}
+p {
+    margin: 0;
+}
+a {
+    display: block;
+    cursor: pointer;
 }
 
 
@@ -23,8 +35,6 @@ img {
     position: relative;
     height: 100%;
     overflow: hidden;
-}
-.mm-area {
     background: radial-gradient(#FFF, #CFCFCF);
 }
 .mm-item,
@@ -35,7 +45,7 @@ img {
     transition: transform .3s;
 }
 .mm-line {
-    background: rgba(255,0,0,1);
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0.3));
 }
 
 
@@ -52,12 +62,82 @@ img {
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
-    /*background: rgba(0,0,0,0.8);*/
 }
-.mm-link img {
+.mm-link--image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /*opacity: 0;*/
+    object-fit: contain;
 }
 
+
+/* text colors */
+
+.mm-link--dark {
+    background: #476FAD;
+    color: #FFFFFF;
+}
+.mm-link--light {
+    background: #DAE8F5;
+    color: #265B87;
+}
+.mm-link--white {
+    background: #FFFFFF;
+    color: #4C73B0;
+}
+
+
+/* text */
+
+.mm-link--text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.mm-link--text .label {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 2px;
+}
+.mm-link--text .title {
+    font-weight: 600;
+}
+
+
+/* 4x4 */
+
+.mm-link--4x4 {
+    overflow: visible;
+}
+.mm-link--4x4 img {
+    width: 100%;
+    height: 100%;
+}
+.mm-link--4x4 p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.mm-link--4x4 a {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* forum */
+
+.mm-link--forum {
+    padding: 10%;
+    background: #454442;
+    color: #FFFFFF;
+}
+.mm-link--forum img {
+    width: 100%;
+    margin-bottom: 10%;
+}
