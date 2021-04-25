@@ -218,7 +218,7 @@
                     },
                     {
                         radius: 192,
-                        angle: 215,
+                        angle: 235,
                         size: 98,
                         link: 'https://www.youtube.com/',
                         content: image('telegram.png'),
