@@ -218,10 +218,10 @@
                     },
                     {
                         radius: 192,
-                        angle: 250,
+                        angle: 215,
                         size: 98,
                         link: 'https://www.youtube.com/',
-                        content: image('youtube.png'),
+                        content: image('telegram.png'),
                     }
                     
                 ]
