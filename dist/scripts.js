@@ -215,7 +215,15 @@
                         size: 98,
                         link: 'https://www.youtube.com/',
                         content: image('youtube.png'),
+                    },
+                    {
+                        radius: 192,
+                        angle: 250,
+                        size: 98,
+                        link: 'https://www.youtube.com/',
+                        content: image('youtube.png'),
                     }
+                    
                 ]
             },
 
