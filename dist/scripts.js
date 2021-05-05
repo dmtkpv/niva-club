@@ -34,7 +34,7 @@
                 radius: 410,
                 angle: 2,
                 size: 140,
-                link: 'https://www.instagram.com',
+                link: 'https://www.instagram.com/nivaclubnet',
                 content: image('instagram.png')
             },
 
@@ -51,15 +51,15 @@
                         radius: 206,
                         angle: 26.6,
                         size: 108,
-                        link: 'https://www.facebook.com',
+                        link: 'https://www.facebook.com/nivaclubnet',
                         content: text('Страница', 'Нива.Клуб', 'dark')
                     },
                     {
                         radius: 205,
                         angle: 331.2,
                         size: 108,
-                        link: 'https://www.facebook.com',
-                        content: text('Группа', 'Нива.Клуб', 'white', 0.9)
+                        link: 'https://www.facebook.com/groups/nivaclubnet',
+                        content: text('Сообщество', 'Нива.Клуб', 'white', 0.9)
                     }
                 ]
             },
@@ -86,7 +86,7 @@
                 radius: 466,
                 angle: 52.6,
                 size: 144,
-                link: 'https://www.youtube.com/',
+                link: 'https://www.youtube.com/channel/UCrFypXn-Nplf2MK1pNyIgGw',
                 content: image('youtube.png'),
             },
 
@@ -97,7 +97,7 @@
                 radius: 338,
                 angle: 70.4,
                 size: 106,
-                link: 'https://www.viber.com/',
+                link: 'https://invite.viber.com/?g2=AQAQyF3292U6kkq9ekHE5VZCjlI4YT9bb7UqVrp7z%2FHH7wuVj2eHvnSdg%2F%2F2A26D&lang=ru',
                 content: image('viber.png'),
             },
 
@@ -166,14 +166,14 @@
                         radius: 141,
                         angle: 65.4,
                         size: 58,
-                        link: 'https://vk.com/',
+                        link: 'https://vk.com/4x4ab',
                         content: image('vk.png'),
                     },
                     {
                         radius: 137,
                         angle: 111.9,
                         size: 64,
-                        link: 'https://www.facebook.com',
+                        link: 'https://www.facebook.com/groups/4x4ab/',
                         content: image('facebook.png'),
                     },
                     {
@@ -199,28 +199,28 @@
                         radius: 184,
                         angle: 133.6,
                         size: 94,
-                        link: 'https://www.instagram.com',
+                        link: 'https://www.instagram.com/nivaclubteam/',
                         content: image('instagram.png'),
                     },
                     {
                         radius: 248,
                         angle: 164.2,
                         size: 102,
-                        link: 'https://vk.com/',
+                        link: 'https://vk.com/nivaclubteam',
                         content: image('vk.png'),
                     },
                     {
                         radius: 192,
                         angle: 194,
                         size: 98,
-                        link: 'https://www.youtube.com/',
+                        link: 'https://www.youtube.com/channel/UCG-UMbYjTF3Acy9efy6J4xQ',
                         content: image('youtube.png'),
                     },
                     {
                         radius: 192,
                         angle: 235,
                         size: 98,
-                        link: 'https://www.youtube.com/',
+                        link: 'https://t.me/nivaclubteam',
                         content: image('telegram.png'),
                     }
                     
@@ -240,42 +240,42 @@
                         radius: 176,
                         angle: 117,
                         size: 75,
-                        link: 'https://www.instagram.com',
+                        link: 'https://www.instagram.com/nivashopnet',
                         content: image('instagram.png'),
                     },
                     {
                         radius: 204,
                         angle: 153.3,
                         size: 102,
-                        link: 'https://web.telegram.org/',
+                        link: 'https://t.me/nivashopnet',
                         content: image('telegram.png'),
                     },
                     {
                         radius: 182,
                         angle: 193,
                         size: 102,
-                        link: 'https://vk.com/',
+                        link: 'https://vk.com/nivashopnet',
                         content: image('vk.png'),
                     },
                     {
                         radius: 188,
                         angle: 235.7,
                         size: 108,
-                        link: 'https://rozetka.com.ua/',
+                        link: 'http://niva-shop.net',
                         content: image('cart.png'),
                     },
                     {
                         radius: 176,
                         angle: 275.8,
                         size: 86,
-                        link: 'https://www.facebook.com',
+                        link: 'https://www.facebook.com/nivashopnet',
                         content: image('facebook.png'),
                     },
                     {
                         radius: 188,
                         angle: 313.6,
                         size: 84,
-                        link: 'https://www.youtube.com/',
+                        link: 'https://www.youtube.com/channel/UCF6nYUvT_nbFL2Vs9e0WrUw?',
                         content: image('youtube.png')
                     }
                 ]
@@ -288,7 +288,7 @@
                 radius: 370,
                 angle: 269.4,
                 size: 258,
-                link: 'http://example.com/',
+                link: 'https://niva-club.net/',
                 content: `
                     <a class="mm-link--forum mm-link--text">
                         <img src="images/forum.png">
@@ -305,7 +305,7 @@
                 radius: 450,
                 angle: 310.9,
                 size: 144,
-                link: 'https://vk.com/',
+                link: 'https://vk.com/nivaclubnet',
                 content: image('vk.png'),
             },
 
@@ -322,14 +322,14 @@
                         radius: 232,
                         angle: 0.7,
                         size: 108,
-                        link: 'https://web.telegram.org/',
+                        link: 'https://t.me/lada4x4',
                         content: text('Страница', 'Нива.Клуб', 'light')
                     },
                     {
                         radius: 234,
                         angle: 312.2,
                         size: 108,
-                        link: 'https://web.telegram.org/',
+                        link: 'https://t.me/nivaclubnet',
                         content: text('Группа', 'Нива.Клуб', 'light')
                     }
                 ]
