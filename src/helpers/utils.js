@@ -6,9 +6,9 @@ export default {
         return $node.firstElementChild;
     },
 
-    flat (item, result = []) {
-        result.push(item);
-        item.children.forEach(item => this.flat(item, result));
+    flat (item, result = [], include = false) {
+        include && result.push(item);
+        item.children.forEach(item => this.flat(item, result, true));
         return result;
     },
 

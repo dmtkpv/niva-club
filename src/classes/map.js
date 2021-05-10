@@ -1,5 +1,5 @@
 import $ from '../helpers/utils'
-import Item from './item'
+import Root from './root'
 
 export default class MindMap {
 
@@ -14,19 +14,6 @@ export default class MindMap {
             padding: 0,
             line: 10,
             minScale: 0.5
-        }
-    }
-
-    get origin () {
-        const size = this.data.size;
-        return {
-            x: 0,
-            y: 0,
-            scale: 1,
-            level: -1,
-            offset: { width: size, height: size },
-            $node: this.$node,
-            size
         }
     }
 
@@ -45,9 +32,9 @@ export default class MindMap {
 
         this.scale = 1;
         this.data = data;
-        this.item = new Item(data, this.origin, this);
-        this.items = $.flat(this.item);
-        this.offset = $.offset(this.items, this.origin);
+        this.root = new Root(data, this);
+        this.items = $.flat(this.root);
+        this.offset = $.offset(this.items, this.root);
 
         this.resize();
         window.addEventListener('resize', () => this.resize());
@@ -102,8 +89,8 @@ export default class MindMap {
 
     resize () {
         this.scale = Math.max(this.getScale(this.offset), this.minScale);
-        this.item.$node.style.transition = 'none';
-        this.item.$node.style.transform = `scale(${this.scale})`;
+        this.root.$node.style.transition = 'none';
+        this.root.$node.style.transform = `scale(${this.scale})`;
     }
 
     zoomTo (item) {
@@ -112,8 +99,8 @@ export default class MindMap {
         const x = parent.x + item.x;
         const y = parent.y + item.y;
         const scale = Math.min(this.getScale(item.offset), this.scale);
-        this.item.$node.style.transition = '';
-        this.item.$node.style.transform = `scale(${scale}) translate(${-x}px, ${-y}px)`
+        this.root.$node.style.transition = '';
+        this.root.$node.style.transform = `scale(${scale}) translate(${-x}px, ${-y}px)`
     }
 
 }
