@@ -15,6 +15,13 @@ export default {
 
     link ({ link, classname, content }) {
         return $.node(`<a ${link ? `href="${link}"` : ''} class="mm-link ${classname}">${content}</a>`);
-    }
+    },
 
+    loader () {
+        return $.node(`
+            <svg class="mm-loader">
+                <circle r="50%" cx="50%" cy="50%"/>
+            </svg>
+        `);
+    }
 }

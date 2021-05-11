@@ -1,7 +1,6 @@
 import $ from '../helpers/utils'
 import render from '../helpers/render'
 import Item from './item'
-const loader = `<svg class="mm-loader"><circle r="50%" cx="50%" cy="50%"/></svg>`
 
 export default class Root {
 
@@ -32,7 +31,7 @@ export default class Root {
         this.parent.offset.height = this.size;
 
         this.$node = render.item(this);
-        this.$loader = $.node(loader);
+        this.$loader = render.loader();
         this.$link = $.node(this.content);
         this.$link.classList.add('mm-link');
         this.$link.addEventListener('click', event => this.map.click(this));
@@ -64,7 +63,7 @@ export default class Root {
             $circle.style.transition = '';
             $circle.style.strokeDashoffset = length - loaded / $images.length * length;
             if (loaded !== $images.length) return;
-            $circle.ontransitionend = () => this.$loader.classList.add('loaded');
+            $circle.ontransitionend = () => this.map.$node.classList.add('mm--loaded');
         }
 
         for (let i = 0; i < $images.length; i++) {

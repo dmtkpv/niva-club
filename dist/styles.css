@@ -17,6 +17,9 @@ body {
 img {
     display: block;
 }
+svg {
+    display: block;
+}
 p {
     margin: 0;
 }
@@ -70,7 +73,7 @@ a {
     stroke-width: 12;
     transition: stroke-dashoffset .5s;
 }
-.mm-loader.loaded {
+.mm--loaded .mm-loader {
     opacity: 0;
     visibility: hidden;
 }
@@ -170,4 +173,41 @@ a {
 .mm-link--forum img {
     width: 100%;
     margin-bottom: 10%;
+}
+
+
+/* click animation */
+
+.mm-link--root svg {
+    position: absolute;
+    fill: #DCBC5E;
+    width: 64px;
+    height: 64px;
+    top: 100%;
+    left: calc(50% + 64px);
+}
+.mm-link--root svg g {
+    opacity: 0;
+}
+.mm--loaded .mm-link--root svg {
+    animation: click-move 5s ease infinite;
+}
+.mm--loaded .mm-link--root svg g {
+    animation: click-fade 5s ease infinite;
+}
+@keyframes click-move {
+    0%   {transform: translate(0, 0)         scale(1)   rotate(-30deg); }
+    20%  {transform: translate(-64px, -64px) scale(1)   rotate(-30deg) }
+    30%  {transform: translate(-64px, -64px) scale(0.9) rotate(-30deg)}
+    40%  {transform: translate(-64px, -64px) scale(1)   rotate(-30deg)}
+    60%  {transform: translate(-64px, -64px) scale(1)   rotate(-30deg)}
+    80%  {transform: translate(0, 0)         scale(1)   rotate(-30deg)}
+    100% {transform: translate(0, 0)         scale(1)   rotate(-30deg)}
+}
+@keyframes click-fade {
+    0% {opacity: 0}
+    20% {opacity: 0}
+    30% {opacity: 1}
+    40% {opacity: 0}
+    100% {opacity: 0}
 }
