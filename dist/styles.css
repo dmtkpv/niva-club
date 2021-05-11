@@ -190,10 +190,10 @@ a {
     opacity: 0;
 }
 .mm--loaded .mm-link--root svg {
-    animation: click-move 5s ease infinite;
+    animation: click-move 5s 1s ease infinite;
 }
 .mm--loaded .mm-link--root svg g {
-    animation: click-fade 5s ease infinite;
+    animation: click-fade 5s 1s ease infinite;
 }
 @keyframes click-move {
     0%   {transform: translate(0, 0)         scale(1)   rotate(-30deg); }
