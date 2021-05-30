@@ -34,7 +34,11 @@ export default class Root {
         this.$loader = render.loader();
         this.$link = $.node(this.content);
         this.$link.classList.add('mm-link');
-        this.$link.addEventListener('click', event => this.map.click(this));
+
+        this.$link.addEventListener('click', event => {
+            this.map.$node.classList.add('mm--clicked');
+            this.map.click(this);
+        });
 
         this.children = this.children.map(options => new Item(options, this, map));
         this.offset = $.offset(this.children, this);

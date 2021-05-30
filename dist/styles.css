@@ -176,9 +176,12 @@ a {
 }
 
 
-/* click animation */
 
-.mm-link--root svg {
+/*
+    Hand
+*/
+
+.mm-hand {
     position: absolute;
     fill: #DCBC5E;
     width: 64px;
@@ -186,16 +189,22 @@ a {
     top: 100%;
     left: calc(50% + 64px);
 }
-.mm-link--root svg g {
+.mm-hand g {
     opacity: 0;
 }
-.mm--loaded .mm-link--root svg {
-    animation: click-move 5s 1s ease infinite;
+.mm--loaded .mm-hand {
+    animation: mm-hand-move 5s ease infinite;
+    transition: opacity .5s ease;
 }
-.mm--loaded .mm-link--root svg g {
-    animation: click-fade 5s 1s ease infinite;
+.mm--loaded .mm-hand g {
+    animation: mm-hand-fade 5s ease infinite;
 }
-@keyframes click-move {
+.mm--clicked .mm-hand {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+@keyframes mm-hand-move {
     0%   {transform: translate(0, 0)         scale(1)   rotate(-30deg); }
     20%  {transform: translate(-64px, -64px) scale(1)   rotate(-30deg) }
     30%  {transform: translate(-64px, -64px) scale(0.9) rotate(-30deg)}
@@ -204,7 +213,7 @@ a {
     80%  {transform: translate(0, 0)         scale(1)   rotate(-30deg)}
     100% {transform: translate(0, 0)         scale(1)   rotate(-30deg)}
 }
-@keyframes click-fade {
+@keyframes mm-hand-fade {
     0% {opacity: 0}
     20% {opacity: 0}
     30% {opacity: 1}

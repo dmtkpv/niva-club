@@ -26,7 +26,7 @@
         content: `
             <a class="mm-link--root mm-link--image">
                 <img src="images/logo.png">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.3 432.3">
+                <svg class="mm-hand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.3 432.3">
                   <g>
                     <path d="M88.8,93.68a9.92,9.92,0,0,1-5-1.34L58.26,77.6a10,10,0,1,1,10-17.32L93.81,75a10,10,0,0,1-5,18.66Z"/>
                     <path d="M121.16,61.34a10,10,0,0,1-8.67-5L97.75,30.79a10,10,0,0,1,17.32-10l14.74,25.55a10,10,0,0,1-8.65,15Z"/>
